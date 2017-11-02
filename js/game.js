@@ -10,7 +10,7 @@ var Game = {
   create: function() {
 
     //music
-    var audio = new Audio("music.mp3");
+    var audio = new Audio("static/music.mp3");
     audio.play();
     //Board
     board();

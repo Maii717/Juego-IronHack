@@ -2,7 +2,7 @@ var Menu = {
   preload: function(){
 
     game1.stage.backgroundColor = "#fff";
-    game1.load.image("button", "button-start.png");
+    game1.load.image("button", "static/button-start.png");
 
   },
 

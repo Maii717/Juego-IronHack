@@ -40,7 +40,7 @@ function collision1(weapon1,player2) {
 
     if (score1>10)
     {
-      this.state.start("WinPlayer1");
+      this.state.start("winplayer1");
     }
 
 }

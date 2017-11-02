@@ -8,7 +8,7 @@ game1.state.add("Menu",Menu);
 game1.state.add("Game",Game);
 
 //Win Player1
-game1.state.add("WinPLayer1",WinPlayer1);
+game1.state.add("winpLayer1",winplayer1);
 
 
 //Start game

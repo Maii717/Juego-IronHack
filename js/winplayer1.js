@@ -1,4 +1,4 @@
-var WinPlayer1 = {
+var winplayer1 = {
   preload: function() {
     game1.load.image("background", "vs.jpg");
     game1.load.image("player1", "player1.png");
