@@ -8,8 +8,9 @@ game1.state.add("Menu",Menu);
 game1.state.add("Game",Game);
 
 //Win Player1
-game1.state.add("winpLayer1",winplayer1);
-
+game1.state.add("winplayer1",winplayer1);
+//Win Player2
+game1.state.add("winplayer2",winplayer2);
 
 //Start game
 game1.state.start("Menu");

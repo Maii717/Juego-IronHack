@@ -9,9 +9,6 @@ var Game = {
 
   create: function() {
 
-    //music
-    var audio = new Audio("static/music.mp3");
-    audio.play();
     //Board
     board();
     //cursors
@@ -40,29 +37,34 @@ var Game = {
 
 
   },
-  endGame: function(){
-    if (score1===10)
-    {
-      game1.state.start("WinPlayer1");
-    }
-  }
 
 };
 
-var score1 = 0;
+var score1 = 10;
 var scoreText1;
 var scoreText2;
-var score2 = 0;
+var score2 = 10;
 //Collisions config
 function collision1(weapon1,player2) {
   player2.kill();
-  score1 += 1;
-    scoreText1.text = 'Score: ' + score1;
+  score1 -= 1;
+    scoreText1.text = 'P1 Score: ' + score1;
+    if (score1==0)
+    {
+      score1=10;
+      this.state.start("winplayer1");
+    }
+
 }
 function collision2(weapon2,player1) {
   player1.kill();
-  score2 += 1;
-    scoreText2.text = 'Score: ' + score2;
+  score2 -= 1;
+    scoreText2.text = 'P2 Score: ' + score2;
+    if (score2==0)
+    {
+      score2=10;
+      this.state.start("winplayer2");
+    }
 }
 
 collision1();
