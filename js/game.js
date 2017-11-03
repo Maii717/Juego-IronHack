@@ -5,6 +5,7 @@ var Game = {
     game1.load.image("player2", "static/player2.png");
     game1.load.image("arrowr", "static/arrowr.png");
     game1.load.image("arrowl", "static/arrowl.png");
+    game1.load.image("cloud", "static/black-cloud.png");
   },
 
   create: function() {
@@ -37,34 +38,40 @@ var Game = {
 
 
   },
-
 };
 
-var score1 = 10;
-var scoreText1;
-var scoreText2;
-var score2 = 10;
+var lifep1 = 10;
+var lifetext1;
+var lifetext2;
+var lifep2 = 10;
 //Collisions config
 function collision1(weapon1,player2) {
   player2.kill();
-  score1 -= 1;
-    scoreText1.text = 'P1 Score: ' + score1;
-    if (score1==0)
+  audio = new Audio("static/shootsound.mp3");
+  audio.play();
+  lifep2 -= 1;
+    lifetext1.text = 'P2 Life: ' + lifep2;
+    if (lifep2==0)
     {
-      score1=10;
+      lifep2=10;
       this.state.start("winplayer1");
     }
 
 }
 function collision2(weapon2,player1) {
   player1.kill();
-  score2 -= 1;
-    scoreText2.text = 'P2 Score: ' + score2;
-    if (score2==0)
+  lifep1 -= 1;
+  audio1 = new Audio("static/shootsound.mp3");
+  audio1.play();
+    lifetext2.text = 'P1 Life: ' + lifep1;
+    if (lifep1==0)
+
     {
-      score2=10;
+      lifep1=10;
       this.state.start("winplayer2");
+
     }
+
 }
 
 collision1();

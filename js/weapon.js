@@ -17,12 +17,12 @@ function fireP1() {
 
 function shootP1() {
   var arrowr = weapon1.getFirstExists(false);
-  var buttonWeaponP1 = game1.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+  var buttonWeaponP1 = game1.input.keyboard.addKey(Phaser.Keyboard.SHIFT);
 
 
   if (buttonWeaponP1.isDown) {
     if (arrowr) {
-      arrowr.reset(player1.x + 55, player1.y);
+      arrowr.reset(player1.x + 150, player1.y+50);
       arrowr.body.velocity.x = +700;
     }
   }
@@ -46,7 +46,7 @@ function shootP2() {
 
   if (buttonWeaponP2.isDown) {
     if (arrowl) {
-      arrowl.reset(player2.x - 55, player2.y);
+      arrowl.reset(player2.x -150, player2.y+50);
       arrowl.body.velocity.x = -700;
 
     }

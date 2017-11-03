@@ -31,7 +31,7 @@ function moveP1() {
   if (leftButton.isDown) {
     player1.position.x -= 4;
   } else if (rightButton.isDown) {
-    var limit1 = game1.width/2 -120;
+    var limit1 = game1.width/2 -200;
     player1.position.x += 4;
     if(player1.x > limit1) player1.x -= 4;
   }
@@ -49,7 +49,7 @@ function moveP2() {
       player2.position.y -= 5;
   }
   if (cursors.left.isDown) {
-    var limit2 = game1.width/2+120;
+    var limit2 = game1.width/2+200;
     player2.position.x -= 4;
     if(player2.x < limit2) player2.x = limit2;
   } else if (cursors.right.isDown) {

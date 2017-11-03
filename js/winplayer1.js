@@ -1,7 +1,7 @@
 var winplayer1 = {
   preload: function() {
     game1.stage.backgroundColor = "#fff";
-    game1.load.image("button", "static/button-start.png");
+    game1.load.image("button", "static/button-restart.png");
 
   },
 
@@ -9,20 +9,15 @@ var winplayer1 = {
 
   var button = this.add.button(game1.width / 2, game1.height / 2+70, "button",this.restart,this);
   button.anchor.setTo(0.5, 0.5);
-  var txtWinner1 = game1.add.text(game1.width/2,game1.height/2 -140, "PLayer 1 Win",{font:"bold 50px sans-serif", fill:"black", align:"center"});
+  var txtWinner1 = game1.add.text(game1.width/2,game1.height/2 -140, "Player 1 Win",{font:"bold 50px sans-serif", fill:"black", align:"center"});
   txtWinner1.anchor.setTo(0.5, 0.5);
-
+  var txtRestart = game1.add.text(game1.width/2,game1.height/2 -60, "Try Again?",{font:"bold 35px sans-serif", fill:"black", align:"center"});
+  txtRestart.anchor.setTo(0.5, 0.5);
+  audio.pause();
+  audio.currentTime = 0;
   },
 
   update: function() {
-
-    //Background animation
-    // back();
-    // //Movement PLayers
-    // moveP1();
-    //
-    // //ShootPlayers
-    // shootP1();
 
   },
   restart: function(){
